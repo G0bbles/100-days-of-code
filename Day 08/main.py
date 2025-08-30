@@ -3,31 +3,12 @@ print(ord('z'))
 print(ord('A'))
 print(ord('Z'))
 
-
-# def encrypt(message, shift):
-#     encrypted_text = ''
-
-#     for l in message:
-#         if 97 <= ord(l) <= 122:
-#             if ord(l) + shift > 122:
-#                 encrypted_text += chr(shift - (123 - ord(l)) + 97)
-#             else:
-#                 encrypted_text += chr(shift + ord(l))
-
-#         elif 65 <= ord(l) <= 90:
-#             if ord(l) + shift > 90:
-#                 encrypted_text += chr(shift - (91 - ord(l)) + 65)
-#             else:
-#                 encrypted_text += chr(shift + ord(l))
-        
-#         else:
-#             encrypted_text += l
-#     return encrypted_text
-
-# print(encrypt("Hello z", 9))
-
-
 def caesar(message, shift, encrypt_or_decrypt):
+    '''
+    Takes a string and uses a Caesar cypher to encrypt alpha characters.
+    Takes a string, shift amount (e.g. 2), and whether to encrypt of decrypt.
+    Returns encrypted string.
+    '''
     cipher_text = ""
 
     if encrypt_or_decrypt.lower() == 'decrypt':
@@ -58,9 +39,9 @@ END_CIPHER = False
 while not END_CIPHER:
     text = input("What is you message?\n")
     shift_amount = int(input("How many should I shift by?\n"))
-    encrypt_or_decrypt = input("Do you want to 'encrypt' or 'decrypt'?\n")
-    print(caesar(text, shift_amount, encrypt_or_decrypt))
+    encrypt_or_decrypt_choice = input("Do you want to 'encrypt' or 'decrypt'?\n")
+    print(caesar(text, shift_amount, encrypt_or_decrypt_choice))
     done = input("Would you like to continue? 'yes' or 'no'.\n").lower()
-    
+
     if done == 'no':
         END_CIPHER = True
