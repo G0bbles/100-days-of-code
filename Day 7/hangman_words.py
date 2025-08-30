@@ -1,0 +1,22 @@
+words = [
+    "mountain",
+    "river",
+    "apple",
+    "computer",
+    "city",
+    "dog",
+    "book",
+    "ocean",
+    "music",
+    "sun",
+    "tree",
+    "car",
+    "house",
+    "flower",
+    "friend",
+    "game",
+    "dream",
+    "star",
+    "bird",
+    "cloud"
+]
